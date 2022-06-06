@@ -33,7 +33,7 @@ Post a header called "password" and "retention", and the function returns a URL 
 
 Get: Get the password link, and the function returns the password and an expiration timer.
 
-### AzPwGen
+### PwGen
 
 GUI implementation of the above functions. Returns HTML.
 
