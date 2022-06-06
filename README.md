@@ -48,13 +48,13 @@ GUI implementation of the above functions. Returns HTML.
 ### Create password link with 16 characters and 7 days retention
 `Invoke-RestMethod -Method 'Get' -Uri 'https://{functionName}.azurewebsites.net/api/create'`
 
-### create password link with VerySecure123! as password
+### Create password link with VerySecure123! as password
 `Invoke-RestMethod -Method 'Post' -Uri 'https://{functionName}.azurewebsites.net/api/create' -Headers @{'Password'='VerySecure123!'}`
 
 ### Create password link with VerySecure123! as password and 30 seconds retention
 `Invoke-RestMethod -Method 'Post' -Uri 'https://{functionName}.azurewebsites.net/api/create' -Headers @{'Password'='VerySecure123!';'Retention'=30}`
 
-### create and retrieve password
+### Create and retrieve password
 `$response = Invoke-RestMethod -Method 'Post' -Uri 'https://{functionName}.azurewebsites.net/api/create' -Headers @{'Password'='VerySecure123!';'Retention'=3600}`
 
 `Invoke-RestMethod -Method 'Get' -Uri $response.Url`
