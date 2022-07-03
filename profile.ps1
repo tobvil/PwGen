@@ -12,4 +12,4 @@ $Global:ErrorActionPreference = 'Stop'
 
 Connect-AzAccount -Identity
 
-Import-Module .\Modules\AzPwPush.psm1
+Import-Module .\Modules\PwGen.psm1
