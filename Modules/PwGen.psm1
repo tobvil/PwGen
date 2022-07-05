@@ -77,8 +77,8 @@ Function New-RandomPassword {
 
     $password = $randomPassword + $lower + $upper + $number + $sign
 
-    #shuffle Password
-    $shuffledPassword = -join (Get-Random -Shuffle -InputObject $password.ToCharArray())
+    #from PowerShell 7.1 we can use -join (Get-Random -Shuffle -InputObject $password.ToCharArray())
+    $shuffledPassword = -join ($password.ToCharArray() | Sort-Object {Get-Random})
 
     $shuffledPassword
 }
